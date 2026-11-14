@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lodge | Llifior Lodges</title>
+<meta name="description" content="Lodge details, availability and direct booking.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%B2%3C/text%3E%3C/svg%3E">
+<script src="js/common.js" defer></script><script src="js/booking.js" defer></script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="index.html">Llifior <span>Lodges</span></a>
+<button class="menu-btn" aria-expanded="false" aria-label="Menu">&#9776; Menu</button>
+<nav><ul><li><a href="index.html">Home</a></li><li><a href="lodges.html" class="active">Lodges</a></li><li><a href="location.html">Location & things to do</a></li><li><a href="faq.html">FAQ & policies</a></li><li><a href="contact.html">Contact</a></li><li><a class="btn" style="padding:8px 16px;color:#fff" href="lodges.html">Book direct</a></li></ul></nav>
+</div></header>
+<main>
+<section><div class="wrap">
+<p><a href="lodges.html">&larr; All lodges</a></p>
+<h1 style="margin-bottom:4px"><span id="l-name">Lodge</span> <small style="font-size:.5em;color:var(--muted)">(<span id="l-english"></span>)</small></h1>
+<p id="l-tagline" style="margin-top:0;color:var(--muted)"></p>
+<div class="photo big" id="l-photo">[Add lodge photos]</div>
+<div class="gallery" id="l-gallery"></div>
+<div class="meta" id="l-meta" style="margin:14px 0"></div>
+<div class="two">
+<div>
+<h2>About this lodge</h2>
+<p id="l-summary"></p>
+<h3>Features</h3>
+<ul class="features" id="l-features"></ul>
+<p class="msg info" id="l-rules"></p>
+</div>
+<div class="panel" id="booking">
+<div class="steps"><span class="on">1. Dates</span><span>2. Your details</span><span>3. Confirmation</span></div>
+<div id="step-dates">
+<div class="cal-head"><button type="button" id="cal-prev" aria-label="Previous months">&larr;</button><strong id="cal-hint">Select your arrival date.</strong><button type="button" id="cal-next" aria-label="Next months">&rarr;</button></div>
+<div class="cal-months" id="cal-months"></div>
+<div class="legend"><span><i style="background:#eef3ee"></i>Available</span><span><i style="background:var(--green)"></i>Selected</span><span><i style="background:#f4f1ea"></i>No arrivals/departures</span><span><i style="border:1px solid #ccc"></i>Booked</span></div>
+<div class="summary" id="quote"></div>
+<p><button class="btn" id="to-details" disabled>Continue to your details</button></p>
+</div>
+<div id="step-details" class="hidden">
+<div class="summary" id="details-summary" style="margin-top:0;border:0;padding:0"></div>
+<form id="booking-form" name="booking" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+<input type="hidden" name="form-name" value="booking">
+<p class="sr"><label>Leave empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+<!-- hidden fields so Netlify Forms keeps the values the script adds --><input type="hidden" name="reference"><input type="hidden" name="lodge"><input type="hidden" name="lodge_id"><input type="hidden" name="check_in"><input type="hidden" name="check_out"><input type="hidden" name="nights"><input type="hidden" name="price_accommodation"><input type="hidden" name="price_cleaning"><input type="hidden" name="price_pets"><input type="hidden" name="price_total"><input type="hidden" name="submitted_at"><input type="hidden" name="checkin" id="f-checkin"><input type="hidden" name="checkout" id="f-checkout">
+<label for="f-name">Full name</label><input id="f-name" name="name" autocomplete="name" required>
+<div class="row"><div><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+<div><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required></div></div>
+<div class="row"><div><label for="f-guests">Guests</label><select id="f-guests" name="guests"></select></div>
+<div><label for="f-pets">Dogs</label><select id="f-pets" name="pets"><option value="0">0</option></select></div></div>
+<label for="f-message">Message (optional)</label><textarea id="f-message" name="message" rows="3" placeholder="Arrival time, special occasion, bed set-up (super-king or twins)…"></textarea>
+<label class="check"><input type="checkbox" name="terms" value="accepted"> I have read the <a href="faq.html" target="_blank">booking terms</a>. I understand this is a booking request and my stay is confirmed once Llifior Lodges replies and my deposit is paid.</label>
+<div class="msg err hidden" id="form-error" role="alert"></div>
+<p style="display:flex;gap:10px;flex-wrap:wrap"><button type="button" class="btn secondary" id="back-dates">&larr; Change dates</button><button class="btn" id="submit-btn" type="submit">Send booking request</button></p>
+<p style="font-size:.85rem;color:var(--muted)">No payment is taken on this website. We never ask for card details here.</p>
+</form>
+</div>
+</div>
+</div>
+</div></section>
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Llifior Lodges</strong> &middot; Near Berriew &amp; Garthmyl, Powys, Mid Wales, SY21 8QQ</p>
+<p>Email: <a data-cfg="contactEmail" href="contact.html">[Add your email]</a> &middot; Phone: <a data-cfg="contactPhone" href="contact.html">[Add your phone]</a></p>
+<p style="font-size:.8rem;opacity:.8">Photos: listing photography of the lodges, used on behalf of the owner. <span class="placeholder">[Confirm photo rights or replace with your own]</span></p>
+<p><a href="faq.html">Booking terms &amp; policies</a> &middot; &copy; <span id="year"></span> Llifior Lodges</p>
+</div></footer>
+</body>
+</html>

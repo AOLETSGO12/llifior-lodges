@@ -1,0 +1,7 @@
+{
+  "_README": "Dates that are already booked or closed, per lodge id. Use ranges {from,to} (inclusive nights, YYYY-MM-DD) or single dates. A booked range covers the NIGHTS stayed, so a stay 5-8 Dec is from 2026-12-05 to 2026-12-07 (guests leave on the 8th, which stays free for a new arrival). The entries below are EXAMPLES - replace with your real calendar.",
+  "aderyn-du":      [{"from": "2026-12-18", "to": "2026-12-27"}, {"from": "2027-02-12", "to": "2027-02-15"}],
+  "titw-tomos-las": [{"from": "2026-12-23", "to": "2027-01-02"}],
+  "bwncath":        [{"from": "2026-11-27", "to": "2026-11-29"}, "2026-12-31"],
+  "barcud-coch":    [{"from": "2026-12-21", "to": "2026-12-28"}]
+}

@@ -1,0 +1,19 @@
+{
+  "_README": "Site-wide settings. Edit values, save, redeploy. Money is in GBP.",
+  "businessName": "Llifior Lodges",
+  "currency": "GBP",
+  "contactEmail": "[Add your email, e.g. hello@llifiorlodges.co.uk]",
+  "contactPhone": "[Add your phone number]",
+  "address": "Llifior Lodges, near Berriew / Garthmyl, Powys, SY21 8QQ, Wales",
+  "checkInTime": "16:00",
+  "checkOutTime": "10:00",
+  "defaultMinNights": 3,
+  "maxPets": 2,
+  "bookingEndpoint": "",
+  "_bookingEndpoint_help": "Paste a Formspree form URL here (e.g. https://formspree.io/f/abcdwxyz). Leave empty to use Netlify Forms when hosted on Netlify, or the email (mailto) fallback elsewhere.",
+  "useNetlifyForms": true,
+  "depositPercent": 25,
+  "depositPaymentLink": "",
+  "_depositPaymentLink_help": "Optional Stripe Payment Link URL for a deposit. If set, the confirmation page shows a 'Pay deposit' button. Never collect card details on this site.",
+  "bookingWindowMonths": 18
+}
